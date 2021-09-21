@@ -43,6 +43,7 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         $student=new Student();
+        $student->_token=$request->input('_token');
         $student->name=$request->input('name');
         $student->email=$request->input('email');
         $student->age=$request->input('age');

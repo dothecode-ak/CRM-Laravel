@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<link rel="shortcut icon" href="/img/favicon.jpg" type="image/x-icon">
     <title>SBYcc Data Mangement</title>
 </head>
 
@@ -22,7 +22,7 @@
             <section class="col">
                 @include ("student-list")
             </section>
-            <section class="col-md-6"></section>
+            <section class="col-md-0"></section>
         </div>
     </div>
     @elseif($layout == 'create')
@@ -36,30 +36,30 @@
                     @csrf
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
+                        <input required type="text" class="form-control" name="name" id="name" placeholder="Enter name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+                        <input required type="email" class="form-control" name="email" id="email" placeholder="Enter email">
                     </div>
                     <div class="form-group">
                         <label for="age">Age</label>
-                        <input type="text" class="form-control" name="age" id="age" placeholder="Enter age">
+                        <input required type="text" class="form-control" name="age" id="age" placeholder="Enter age">
                     </div>
                     <div class="form-group">
                         <label for="class">Class</label>
-                        <input type="text" class="form-control" name="class" id="class" placeholder="Enter class">
+                        <input required type="text" class="form-control" name="class" id="class" placeholder="Enter class">
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Enter subject">
+                        <input required type="text" class="form-control" name="subject" id="subject" placeholder="Enter subject">
                     </div>
                     <div class="form-group">
                         <label for="address">Address</label>
-                        <input type="text" class="form-control" name="address" id="address" placeholder="Enter address">
+                        <input required type="text" class="form-control" name="address" id="address" placeholder="Enter address">
                     </div>
-                    <input type="submit" class="btn btn-info" value="Save">
-                    <input type="submit" class="btn btn-warning" value="Reset">
+                    <input required type="submit" class="btn btn-info" value="Save">
+                    <input required type="submit" class="btn btn-warning" value="Reset">
                 </form>
             </section>
         </div>
@@ -70,9 +70,7 @@
             <section class="col">
                 @include ("student-list")
                   </section>
-            <section class="col">
-
-            </section>
+                  <section class="col-md-6"></section>
         </div>
     </div>
     @elseif($layout == 'edit')
@@ -86,30 +84,30 @@
                     @csrf
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" value="{{ $student->name }}" name="name" id="name" placeholder="Enter name">
+                        <input required type="text" class="form-control" value="{{ $student->name }}" name="name" id="name" placeholder="Enter name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" value="{{ $student->email }}" name="email" id="email" placeholder="Enter email">
+                        <input required type="email" class="form-control" value="{{ $student->email }}" name="email" id="email" placeholder="Enter email">
                     </div>
                     <div class="form-group">
                         <label for="age">Age</label>
-                        <input type="text" class="form-control" value="{{ $student->age }}" name="age" id="age" placeholder="Enter age">
+                        <input required type="text" class="form-control" value="{{ $student->age }}" name="age" id="age" placeholder="Enter age">
                     </div>
                     <div class="form-group">
                         <label for="class">Class</label>
-                        <input type="text" class="form-control" value="{{ $student->class }}" name="class" id="class" placeholder="Enter class">
+                        <input required type="text" class="form-control" value="{{ $student->class }}" name="class" id="class" placeholder="Enter class">
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" class="form-control" value="{{ $student->subject }}" name="subject" id="subject" placeholder="Enter subject">
+                        <input required type="text" class="form-control" value="{{ $student->subject }}" name="subject" id="subject" placeholder="Enter subject">
                     </div>
                     <div class="form-group">
                         <label for="address">Address</label>
-                        <input type="text" class="form-control" value="{{ $student->address }}" name="address" id="address" placeholder="Enter address">
+                        <input required type="text" class="form-control" value="{{ $student->address }}" name="address" id="address" placeholder="Enter address">
                     </div>
-                    <input type="submit" class="btn btn-info" value="Update">
-                    <input type="submit" class="btn btn-warning" value="Reset">
+                    <input required type="submit" class="btn btn-info" value="Update">
+                    <input required type="submit" class="btn btn-warning" value="Reset">
                 </form>
             </section>
         </div>
