@@ -1,10 +1,8 @@
 <div class="card-md-3">
-    <img src="/img/student-privacy4.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-        <h5 class="card-title">All Students lsit</h5>
-        <p class="card-text">Powered by SBY Technocrates India</p>
+        <h5 class="card-title text-center">All Students list</h5>
         <div class="table-responsive-md">
-            <table class="table table-dark">
+            <table class="table table-bordered table-striped text-center">
                 <thead>
                     <tr>
                         <th scope="col">S.N.</th>
@@ -19,6 +17,7 @@
                 </thead>
                 <tbody>
                     @foreach($students as $student)
+                    
                     <tr>
                         <td>{{$student->id}}</td>
                         <td>{{$student->name}}</td>
