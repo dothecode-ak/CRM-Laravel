@@ -26,7 +26,7 @@
                         <td>{{$student->class}}</td>
                         <td>{{$student->subject}}</td>
                         <td>{{$student->address}}</td>
-                        <td style="display: inline-flex;margin:3px"><a style="margin: 3px;" href="{{url('student/show/'.$student->id)}}" class="btn btn-sm btn-info">Show</a>
+                        <td style="display: inline-flex;margin:3px"><a style="margin: 3px;" href="{{url('student/show/'.$student->id)}}" class="btn btn-sm btn-secondary">Show</a>
                             <a href="{{url('student/edit/'.$student->id)}}" style="margin: 3px;" class="btn btn-sm btn-success">Edit</a>
                             <a href="{{url('student/delete/'.$student->id)}}" style="margin: 3px;" class="btn btn-sm btn-info btn-danger">Delete</a>
                         </td>

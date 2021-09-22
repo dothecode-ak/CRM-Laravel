@@ -29,8 +29,8 @@
                         <label for="address">Address</label>
                         <input required type="text" class="form-control" value="{{ $student->address }}" name="address" id="address" placeholder="Enter address">
                     </div>
-                    <input required type="submit" class="btn btn-info" value="Update">
-                    <input required type="submit" class="btn btn-warning" value="Reset">
+                    <input required type="submit" class="btn btn-primary" value="Update">
+                    <!-- <input required type="reset" class="btn btn-secondary" value="Reset"> -->
                 </form>
             </section>
         </div>
